@@ -7,6 +7,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class UserDTO {
 
     @JsonProperty("user") //Al poner esto si envio el json bajo el nombre user me lo mapea a username

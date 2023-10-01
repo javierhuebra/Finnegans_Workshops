@@ -33,4 +33,14 @@ public class User {
         this.password = userDTO.getPassword();
         this.name = userDTO.getName();
     }
+
+    //Método para generar un UserDTO a partir de un User
+    public UserDTO toUserDTO() {
+        return
+                UserDTO.builder()
+                .username(this.username)
+                .password(this.password)
+                .name(this.name)
+                .build();
+    }
 }
