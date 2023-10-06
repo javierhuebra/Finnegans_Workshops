@@ -16,7 +16,7 @@ public class DemodarioApplication {
 		SpringApplication.run(DemodarioApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	public CorsFilter corsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration(); // Allow anyone and anything access.
@@ -29,5 +29,5 @@ public class DemodarioApplication {
 		config.addAllowedMethod("DELETE");
 		source.registerCorsConfiguration("/api/**", config);
 		return new CorsFilter(source);
-	}
+	}*/
 }
