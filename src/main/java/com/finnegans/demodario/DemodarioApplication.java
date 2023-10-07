@@ -45,9 +45,8 @@ public class DemodarioApplication {
 			Product product = productRepository
 					.save(
 							new Product(null,
-									"Notebook Lenovo",
-									BigDecimal.valueOf(10000),
-									null) //Inicio la relacion con orderDetail nula
+									"Notebook MSI",
+									BigDecimal.valueOf(20000)) //Inicio la relacion con orderDetail nula
 					);
 			OrderDetail orderDetail = orderDetailRepository
 					.save(
@@ -55,6 +54,11 @@ public class DemodarioApplication {
 					);
 			System.out.println(product);
 		};
-
+	/*
+		CommandLineRunner es una interfaz en Spring Boot que se utiliza para ejecutar código una vez que la aplicación
+		Spring Boot se ha iniciado por completo. Esta interfaz define un método run(String... args) que debe
+		implementarse en una clase concreta. El método run se ejecutará automáticamente después de que Spring Boot haya
+		configurado todas las partes de la aplicación y esté lista para funcionar.
+	*/
 	}
 }

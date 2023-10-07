@@ -30,11 +30,11 @@ public class Product {
     private String name;
     private BigDecimal price;
 
-    @OneToMany(
+    /*@OneToMany(
             fetch = FetchType.EAGER,
             cascade = CascadeType.ALL
     )
-    private Set<OrderDetail> orderDetails = new HashSet<>();
+    private Set<OrderDetail> orderDetails = new HashSet<>();*/
     //Set es una coleccion que nos permite identificar que no tengamos objetos duplicados
     /*
     No se crea la tabla intermedia products_order_details con mappedBy: Si utilizas la propiedad mappedBy en la anotación @OneToMany,
@@ -44,5 +44,8 @@ public class Product {
     ejemplo:
     @OneToMany(mappedBy = "product") Esto genera que en la tabla orderDetails aparezca una columna product_id solamente y no cree la otra tabla
     private Set<OrderDetail> orderDetails = new HashSet<>();
+
+    obs: tambien se borraría la tabla products_oreder_detail si quito la variable de tipo Set que existe aca, eso haria una relacion uni-direccional
+
     */
 }

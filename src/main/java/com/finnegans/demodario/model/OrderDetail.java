@@ -18,7 +18,7 @@ public class OrderDetail {
             name = "order_detail_sequence",
             sequenceName = "order_detail_sequence",
             allocationSize = 5,
-            initialValue = 10
+            initialValue = 5
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
@@ -32,8 +32,6 @@ public class OrderDetail {
             optional = false,
             fetch = FetchType.LAZY
     )
-    @JoinColumn(
-            name = "product_id"
-    )
+    @JoinColumn(name = "product_id")
     private Product product;
 }
