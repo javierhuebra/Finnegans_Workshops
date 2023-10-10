@@ -1,8 +1,6 @@
 package com.finnegans.demodario.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -10,6 +8,8 @@ import javax.persistence.*;
 @Table(name = "customer")
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @ToString
 public class Customer {
     @Id
@@ -26,6 +26,6 @@ public class Customer {
     private Long id;
 
     private String name;
-    @Column(name = "tax_number", nullable = false)
+    @Column(name = "tax_number", nullable = false, length = 15)
     private String taxNumber;
 }
